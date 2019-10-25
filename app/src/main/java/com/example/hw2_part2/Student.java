@@ -15,7 +15,7 @@ public class Student {
         mFirstName = desc.mFirstName;
         mLastName = desc.mLastName;
         mCWID = desc.mCWID;
-        mCourseEnrollments = desc.mCourseEnrollments;
+        mVehicles = desc.mVehicles;
     }
 
     // Setters:
@@ -31,8 +31,8 @@ public class Student {
         mLastName = sLastName;
     }
 
-    void SetCourseEnrollments(ArrayList<CourseEnrollment> sCourseEnrollments) {
-        mCourseEnrollments = sCourseEnrollments;
+    void SetVehicles(ArrayList<Vehicle> sVehicles) {
+        mVehicles = sVehicles;
     }
 
     // Getters:
@@ -48,8 +48,8 @@ public class Student {
         return mLastName;
     }
 
-    ArrayList<CourseEnrollment> GetCourseEnrollments() {
-        return mCourseEnrollments;
+    ArrayList<Vehicle> GetVehicles() {
+        return mVehicles;
     }
 
     // Variables:
@@ -62,6 +62,6 @@ public class Student {
     // The last name of the student.
     protected String mLastName;
 
-    // The course enrollments for this student.
-    protected ArrayList<CourseEnrollment> mCourseEnrollments = new ArrayList<>();
+    // The vehicles for this student.
+    protected ArrayList<Vehicle> mVehicles = new ArrayList<>();
 }

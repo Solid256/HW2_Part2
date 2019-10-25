@@ -6,5 +6,5 @@ public class StudentDesc {
     public int mCWID = 0;
     public String mFirstName = "";
     public String mLastName = "";
-    public ArrayList<CourseEnrollment> mCourseEnrollments = new ArrayList<>();
+    public ArrayList<Vehicle> mVehicles = new ArrayList<>();
 }

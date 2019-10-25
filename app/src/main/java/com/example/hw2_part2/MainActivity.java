@@ -105,94 +105,100 @@ public class MainActivity extends AppCompatActivity {
 
         // The object descriptors for the students and course enrollments.
         StudentDesc studentDesc = new StudentDesc();
-        CourseEnrollmentDesc courseEnrollmentDesc = new CourseEnrollmentDesc();
+        VehicleDesc vehicleDesc = new VehicleDesc();
 
         // The students being sent to the student database.
         ArrayList<Student> students = new ArrayList<>();
 
         // Student 1.
-        // Course enrollment for weight training.
-        CourseEnrollment courseEnrollment1 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Weight Training";
-        courseEnrollmentDesc.mGrade = "B";
-        courseEnrollment1.Init(courseEnrollmentDesc);
+        // Vehicles.
+        Vehicle vehicle1 = new Vehicle();
+        vehicleDesc.mMake = "Toyota";
+        vehicleDesc.mModel = "Camry";
+        vehicleDesc.mYear = 2010;
+        vehicle1.Init(vehicleDesc);
 
-        // Course enrollment for sneaking.
-        CourseEnrollment courseEnrollment2 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Sneaking";
-        courseEnrollmentDesc.mGrade = "A";
-        courseEnrollment2.Init(courseEnrollmentDesc);
+        Vehicle vehicle2 = new Vehicle();
+        vehicleDesc.mMake = "AMC";
+        vehicleDesc.mModel = "Hornet";
+        vehicleDesc.mYear = 1975;
+        vehicle2.Init(vehicleDesc);
 
         studentDesc.mFirstName = "Adam";
         studentDesc.mLastName = "Jensen";
         studentDesc.mCWID = 00000001;
-        studentDesc.mCourseEnrollments.add(courseEnrollment1);
-        studentDesc.mCourseEnrollments.add(courseEnrollment2);
+        studentDesc.mVehicles.add(vehicle1);
+        studentDesc.mVehicles.add(vehicle2);
 
         student1.Init(studentDesc);
 
 
         // Student 2.
-        studentDesc.mCourseEnrollments = new ArrayList<>();
+        studentDesc.mVehicles = new ArrayList<>();
 
-        // Course enrollment for jumping.
-        CourseEnrollment courseEnrollment3 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Jumping";
-        courseEnrollmentDesc.mGrade = "A";
-        courseEnrollment3.Init(courseEnrollmentDesc);
+        // Vehicles.
+        Vehicle vehicle3 = new Vehicle();
+        vehicleDesc.mMake = "Toyota";
+        vehicleDesc.mModel = "Camry";
+        vehicleDesc.mYear = 2010;
+        vehicle3.Init(vehicleDesc);
 
         // Course enrollment for sneaking.
         studentDesc.mFirstName = "Luigi";
         studentDesc.mLastName = "Mario";
         studentDesc.mCWID = 00000002;
-        studentDesc.mCourseEnrollments.add(courseEnrollment3);
+        studentDesc.mVehicles.add(vehicle3);
 
         student2.Init(studentDesc);
 
         // Student 3.
-        studentDesc.mCourseEnrollments = new ArrayList<>();
+        studentDesc.mVehicles = new ArrayList<>();
 
-        // Course enrollment for running.
-        CourseEnrollment courseEnrollment4 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Running";
-        courseEnrollmentDesc.mGrade = "A";
-        courseEnrollment4.Init(courseEnrollmentDesc);
+        // Vehicles.
+        Vehicle vehicle4 = new Vehicle();
+        vehicleDesc.mMake = "Toyota";
+        vehicleDesc.mModel = "Camry";
+        vehicleDesc.mYear = 2010;
+        vehicle4.Init(vehicleDesc);
 
         studentDesc.mFirstName = "Sonic";
         studentDesc.mLastName = "Hedgehog";
         studentDesc.mCWID = 00000003;
-        studentDesc.mCourseEnrollments.add(courseEnrollment4);
+        studentDesc.mVehicles.add(vehicle4);
 
         student3.Init(studentDesc);
 
         // Student 4.
-        studentDesc.mCourseEnrollments = new ArrayList<>();
+        studentDesc.mVehicles = new ArrayList<>();
+
+        // Vehicles.
+        Vehicle vehicle5 = new Vehicle();
+        vehicleDesc.mMake = "Toyota";
+        vehicleDesc.mModel = "Camry";
+        vehicleDesc.mYear = 2010;
+        vehicle5.Init(vehicleDesc);
 
         // Course enrollment for running.
-        CourseEnrollment courseEnrollment5 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Thinking";
-        courseEnrollmentDesc.mGrade = "A";
-        courseEnrollment5.Init(courseEnrollmentDesc);
+        Vehicle vehicle6 = new Vehicle();
+        vehicleDesc.mMake = "Toyota";
+        vehicleDesc.mModel = "Camry";
+        vehicleDesc.mYear = 2010;
+        vehicle6.Init(vehicleDesc);
 
         // Course enrollment for running.
-        CourseEnrollment courseEnrollment6 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Coding";
-        courseEnrollmentDesc.mGrade = "C";
-        courseEnrollment6.Init(courseEnrollmentDesc);
-
-        // Course enrollment for running.
-        CourseEnrollment courseEnrollment7 = new CourseEnrollment();
-        courseEnrollmentDesc.mCourseID = "Collecting";
-        courseEnrollmentDesc.mGrade = "B";
-        courseEnrollment7.Init(courseEnrollmentDesc);
+        Vehicle vehicle7 = new Vehicle();
+        vehicleDesc.mMake = "Toyota";
+        vehicleDesc.mModel = "Camry";
+        vehicleDesc.mYear = 2010;
+        vehicle7.Init(vehicleDesc);
 
 
         studentDesc.mFirstName = "Razputin";
         studentDesc.mLastName = "Aquato";
         studentDesc.mCWID = 00000004;
-        studentDesc.mCourseEnrollments.add(courseEnrollment5);
-        studentDesc.mCourseEnrollments.add(courseEnrollment6);
-        studentDesc.mCourseEnrollments.add(courseEnrollment7);
+        studentDesc.mVehicles.add(vehicle5);
+        studentDesc.mVehicles.add(vehicle6);
+        studentDesc.mVehicles.add(vehicle7);
 
         student4.Init(studentDesc);
 

@@ -1,5 +1,6 @@
 package com.example.hw2_part2;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +63,21 @@ public class StudentListAdapter extends BaseAdapter {
         if(curTextView != null) {
             curTextView.setText(Integer.toString(curStudent.GetCWID()));
         }
+
+        row_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(view.getContext(), DetailsActivity.class);
+
+                TextView CWIDView = view.findViewById(R.id.CWID);
+
+                String CWIDStr = CWIDView.getText().toString();
+
+                intent.putExtra("CWID", Integer.decode(CWIDStr));
+
+                view.getContext().startActivity(intent);
+            }
+        });
 
         return row_view;
     }

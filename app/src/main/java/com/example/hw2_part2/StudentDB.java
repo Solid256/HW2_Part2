@@ -22,6 +22,17 @@ public class StudentDB {
     ArrayList<Student> GetStudents() {
         return mStudents;
     }
+    Student GetStudentByCWID(int CWID) {
+        for(int i = 0; i < mStudents.size(); i++) {
+            Student curStudent = mStudents.get(i);
+
+            if(curStudent.GetCWID() == CWID) {
+                return curStudent;
+            }
+        }
+
+        return null;
+    }
 
     // Variables:
     // The singleton instance of the student database.
