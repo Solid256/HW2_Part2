@@ -6,10 +6,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,9 +57,44 @@ public class MainActivity extends AppCompatActivity {
 
                     // Create a new student.
                     Student student = new Student();
-                    student.SetFirstName(firstName);
-                    student.SetLastName(lastName);
-                    student.SetCWID(CWID);
+
+                    // The descriptor for the student.
+                    StudentDesc desc = new StudentDesc();
+
+                    desc.mFirstName = firstName;
+                    desc.mLastName = lastName;
+                    desc.mCWID = CWID;
+
+                    // The vehicle info being sent over.
+                    Bundle vehicleInfoBundle = data.getBundleExtra("vehicles");
+
+                    ArrayList<String> vehicleInfo = vehicleInfoBundle.getStringArrayList("vehicles");
+
+                    // If there are no vehicles, skip.
+                    if(vehicleInfo != null) {
+
+                        // The vehicles for the student desc.
+                        ArrayList<Vehicle> vehicles = new ArrayList<>();
+
+                        // Extract the vehicle info
+                        for (int i = 0; i < vehicleInfo.size(); i += 3) {
+
+                            VehicleDesc vehicleDesc = new VehicleDesc();
+
+                            vehicleDesc.mMake = vehicleInfo.get(i);
+                            vehicleDesc.mModel = vehicleInfo.get(i+1);
+                            vehicleDesc.mYear = Integer.decode(vehicleInfo.get(i+2));
+
+                            Vehicle vehicle = new Vehicle();
+                            vehicle.Init(vehicleDesc);
+
+                            vehicles.add(vehicle);
+                        }
+
+                        desc.mVehicles = vehicles;
+                    }
+
+                    student.Init(desc);
 
                     // The array of students.
                     ArrayList<Student> students = StudentDB.GetSingleton().GetStudents();

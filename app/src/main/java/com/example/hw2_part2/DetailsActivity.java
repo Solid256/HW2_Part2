@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    // The root layout of the activity.
     public LinearLayout rootLayout;
 
     @Override
