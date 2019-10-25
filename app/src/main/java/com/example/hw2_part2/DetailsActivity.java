@@ -116,7 +116,16 @@ public class DetailsActivity extends AppCompatActivity {
                 // The current grid layout parameters.
                 GridLayout.LayoutParams lpGridLayout =
                         new GridLayout.LayoutParams(specRow[i], specColumn[j]);
-                lpGridLayout.width = GridLayout.LayoutParams.WRAP_CONTENT;
+
+                if(j == (gridColumns - 1))
+                {
+                    lpGridLayout.width = GridLayout.LayoutParams.WRAP_CONTENT;
+                }
+                else
+                {
+                    lpGridLayout.width = 300;
+                }
+
                 lpGridLayout.height = GridLayout.LayoutParams.WRAP_CONTENT;
 
                 lpGridLayout.setGravity(Gravity.FILL_HORIZONTAL);
